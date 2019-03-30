@@ -133,16 +133,13 @@ Lets modify jenkins job which was created in *Part-01* as below.
      - Name: `ansible_server`
      - Source files	: `Dockerfile`
      - Remote directory	: `//opt//docker`
-      	- `cd /opt/docker`
-	- `docker build -t $JOB_NAME:v1.$BUILD_ID .` 
-
-	- `docker tag $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:v1.$BUILD_ID `
-	- `docker tag $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:latest `
-
-	- `docker push shivaraj18/$JOB_NAME:v1.$BUILD_ID` 
-	- `docker push shivaraj18/$JOB_NAME`
-
-	- `docker rmi -f $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:v1.$BUILD_ID` 
-	- `docker rmi -f  shivaraj18/$JOB_NAME`
+      	   - `cd /opt/docker`
+	   - `docker build -t $JOB_NAME:v1.$BUILD_ID .` 
+	   - `docker tag $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:v1.$BUILD_ID `
+	   - `docker tag $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:latest `
+	   - `docker push shivaraj18/$JOB_NAME:v1.$BUILD_ID` 
+	   - `docker push shivaraj18/$JOB_NAME`
+	   - `docker rmi -f $JOB_NAME:v1.$BUILD_ID shivaraj18/$JOB_NAME:v1.$BUILD_ID` 
+	   - `docker rmi -f  shivaraj18/$JOB_NAME`
 ##### References
 [1] - [Jenkins Docs - Building Software Projects](https://wiki.jenkins.io/display/JENKINS/Building+a+software+project)
